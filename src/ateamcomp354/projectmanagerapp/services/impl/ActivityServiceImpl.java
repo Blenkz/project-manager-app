@@ -2,6 +2,8 @@ package ateamcomp354.projectmanagerapp.services.impl;
 
 import ateamcomp354.projectmanagerapp.services.ActivityService;
 import ateamcomp354.projectmanagerapp.services.ServiceFunctionalityException;
+import ateamcomp354.projectmanagerapp.testing.AbstractDatabaseTest;
+
 import org.jooq.DSLContext;
 import org.jooq.ateamcomp354.projectmanagerapp.Tables;
 import org.jooq.ateamcomp354.projectmanagerapp.tables.daos.ActivityDao;
@@ -16,7 +18,7 @@ import org.jooq.exception.DataAccessException;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ActivityServiceImpl implements ActivityService {
+public class ActivityServiceImpl extends AbstractDatabaseTest implements ActivityService  {
 
     private final DSLContext create;
     private final ProjectDao projectDao;
